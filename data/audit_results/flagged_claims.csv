@@ -1,0 +1,123 @@
+claim_id,member_id,ndc,fill_date,awp_billed,copay_paid,pbm_paid,audit_test,financial_impact,audit_notes
+C2000001,M100062,99999-9999-99,2026-10-10,10.5,10.0,0.5,Invalid NDC,0.5,Submitted NDC 99999-9999-99 not found in drug database.
+C2000024,M100170,99999-9999-99,2026-10-09,24.0,10.0,14.0,Invalid NDC,14.0,Submitted NDC 99999-9999-99 not found in drug database.
+C2000168,M100040,99999-9999-99,2026-11-13,63.0,70.0,0.0,Invalid NDC,0.0,Submitted NDC 99999-9999-99 not found in drug database.
+C2000181,M100190,99999-9999-99,2026-08-12,63.0,70.0,0.0,Invalid NDC,0.0,Submitted NDC 99999-9999-99 not found in drug database.
+C2000327,M100155,99999-9999-99,2026-10-16,126.0,70.0,56.0,Invalid NDC,56.0,Submitted NDC 99999-9999-99 not found in drug database.
+C2000481,M100173,99999-9999-99,2026-11-05,468.0,35.0,433.0,Invalid NDC,433.0,Submitted NDC 99999-9999-99 not found in drug database.
+C2000687,M100128,99999-9999-99,2026-11-01,18.0,20.0,0.0,Invalid NDC,0.0,Submitted NDC 99999-9999-99 not found in drug database.
+C2000692,M100004,99999-9999-99,2026-04-21,24.0,10.0,14.0,Invalid NDC,14.0,Submitted NDC 99999-9999-99 not found in drug database.
+C2000715,M100059,99999-9999-99,2026-09-18,18.0,20.0,0.0,Invalid NDC,0.0,Submitted NDC 99999-9999-99 not found in drug database.
+C2000815,M100058,99999-9999-99,2026-08-20,114.0,35.0,79.0,Invalid NDC,79.0,Submitted NDC 99999-9999-99 not found in drug database.
+C2000875,M100052,99999-9999-99,2026-05-08,7.5,10.0,0.0,Invalid NDC,0.0,Submitted NDC 99999-9999-99 not found in drug database.
+C2000927,M100194,99999-9999-99,2026-04-08,342.0,35.0,307.0,Invalid NDC,307.0,Submitted NDC 99999-9999-99 not found in drug database.
+C2001076,M100118,99999-9999-99,2026-06-19,22.5,10.0,12.5,Invalid NDC,12.5,Submitted NDC 99999-9999-99 not found in drug database.
+C2001100,M100019,99999-9999-99,2026-12-10,21.0,10.0,11.0,Invalid NDC,11.0,Submitted NDC 99999-9999-99 not found in drug database.
+C2001189,M100042,99999-9999-99,2026-11-22,270.0,35.0,235.0,Invalid NDC,235.0,Submitted NDC 99999-9999-99 not found in drug database.
+C2000253,M100002,00074-0243-02,2026-02-10,83250.0,150.0,83100.0,Questionable AWP,27750.0,Billed AWP $83250.00 is higher than reference expected AWP $55500.00
+C2000272,M100017,50242-0040-62,2026-08-23,77400.0,150.0,77250.0,Questionable AWP,25800.0,Billed AWP $77400.00 is higher than reference expected AWP $51600.00
+C2000520,M100122,00093-7271-98,2026-11-23,9.0,20.0,0.0,Questionable AWP,3.0,Billed AWP $9.00 is higher than reference expected AWP $6.00
+C2000704,M100190,00093-7271-98,2026-03-03,9.0,20.0,0.0,Questionable AWP,3.0,Billed AWP $9.00 is higher than reference expected AWP $6.00
+C2000886,M100132,00093-7271-98,2026-12-16,9.0,20.0,0.0,Questionable AWP,3.0,Billed AWP $9.00 is higher than reference expected AWP $6.00
+C2000925,M100123,68180-0121-01,2026-01-03,13.5,10.0,3.5,Questionable AWP,4.5,Billed AWP $13.50 is higher than reference expected AWP $9.00
+C2000960,M100076,50111-0333-01,2026-08-26,36.0,10.0,26.0,Questionable AWP,12.0,Billed AWP $36.00 is higher than reference expected AWP $24.00
+C2000963,M100195,60505-0211-12,2026-01-24,562.5,50.0,512.5,Questionable AWP,187.5,Billed AWP $562.50 is higher than reference expected AWP $375.00
+C2000983,M100143,00093-7271-98,2026-01-28,27.0,20.0,7.0,Questionable AWP,9.0,Billed AWP $27.00 is higher than reference expected AWP $18.00
+C2001002,M100180,00085-4345-05,2026-02-24,108000.0,150.0,107850.0,Questionable AWP,36000.0,Billed AWP $108000.00 is higher than reference expected AWP $72000.00
+C2000251,M100038,00074-0243-02,2026-03-12,55500.0,0.0,55500.0,Incorrect Copay,150.0,Member paid $0.00 instead of expected copay $150.00
+C2000369,M100186,00002-3270-30,2026-11-19,468.0,0.0,468.0,Incorrect Copay,35.0,Member paid $0.00 instead of expected copay $35.00
+C2000480,M100024,60505-0134-00,2026-04-08,27.0,0.0,27.0,Incorrect Copay,10.0,Member paid $0.00 instead of expected copay $10.00
+C2000515,M100091,00002-3270-30,2026-07-23,312.0,0.0,312.0,Incorrect Copay,35.0,Member paid $0.00 instead of expected copay $35.00
+C2000711,M100148,50242-0040-62,2026-11-18,51600.0,0.0,51600.0,Incorrect Copay,150.0,Member paid $0.00 instead of expected copay $150.00
+C2000776,M100057,00071-0156-23,2026-05-24,135.0,0.0,135.0,Incorrect Copay,35.0,Member paid $0.00 instead of expected copay $35.00
+C2000788,M100060,60505-0134-00,2026-04-23,27.0,0.0,27.0,Incorrect Copay,10.0,Member paid $0.00 instead of expected copay $10.00
+C2000862,M100177,60505-0211-12,2026-05-02,375.0,0.0,375.0,Incorrect Copay,50.0,Member paid $0.00 instead of expected copay $50.00
+C2001035,M100076,00093-3109-05,2026-10-05,10.5,0.0,10.5,Incorrect Copay,10.0,Member paid $0.00 instead of expected copay $10.00
+C2001127,M100124,00085-4345-05,2026-07-03,72000.0,0.0,72000.0,Incorrect Copay,150.0,Member paid $0.00 instead of expected copay $150.00
+C2000119D,M100033,00093-7271-98,2026-04-16,18.0,20.0,0.0,Duplicate Claim,0.0,"Multiple claims processed for same member, drug, and fill date."
+C2000201D,M100078,00074-4339-13,2026-10-30,126.0,70.0,56.0,Duplicate Claim,56.0,"Multiple claims processed for same member, drug, and fill date."
+C2000258D,M100128,50111-0333-01,2026-10-02,36.0,10.0,26.0,Duplicate Claim,26.0,"Multiple claims processed for same member, drug, and fill date."
+C2000282D,M100187,50242-0040-62,2026-08-06,51600.0,150.0,51450.0,Duplicate Claim,51450.0,"Multiple claims processed for same member, drug, and fill date."
+C2000468D,M100106,68180-0121-01,2026-05-21,9.0,10.0,0.0,Duplicate Claim,0.0,"Multiple claims processed for same member, drug, and fill date."
+C2000573D,M100184,65862-0198-99,2026-07-13,15.0,10.0,5.0,Duplicate Claim,5.0,"Multiple claims processed for same member, drug, and fill date."
+C2000665D,M100055,60505-0211-12,2026-09-02,375.0,50.0,325.0,Duplicate Claim,325.0,"Multiple claims processed for same member, drug, and fill date."
+C2000712D,M100131,00085-4345-05,2026-07-04,72000.0,150.0,71850.0,Duplicate Claim,71850.0,"Multiple claims processed for same member, drug, and fill date."
+C2000775D,M100100,00006-0952-54,2026-04-03,228.0,35.0,193.0,Duplicate Claim,193.0,"Multiple claims processed for same member, drug, and fill date."
+C2000791D,M100083,60505-0211-12,2026-01-31,375.0,50.0,325.0,Duplicate Claim,325.0,"Multiple claims processed for same member, drug, and fill date."
+C2001056D,M100048,50242-0040-62,2026-09-24,51600.0,150.0,51450.0,Duplicate Claim,51450.0,"Multiple claims processed for same member, drug, and fill date."
+C2001081,M100100,00006-0952-54,2026-03-02,342.0,35.0,307.0,Duplicate Claim,307.0,"Multiple claims processed for same member, drug, and fill date."
+C2001116D,M100005,00006-0275-31,2026-11-20,549.0,35.0,514.0,Duplicate Claim,514.0,"Multiple claims processed for same member, drug, and fill date."
+C2001116D,M100005,00006-0275-31,2026-11-20,549.0,35.0,514.0,Refill Too Soon,514.0,"Refill occurred after 0 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000784,M100008,60505-0134-00,2026-12-25,27.0,10.0,17.0,Refill Too Soon,17.0,"Refill occurred after 44 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000060R,M100010,00085-4345-05,2026-11-18,72000.0,150.0,71850.0,Refill Too Soon,71850.0,"Refill occurred after 5 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000627,M100011,00006-0275-31,2026-08-14,549.0,35.0,514.0,Refill Too Soon,514.0,"Refill occurred after 41 days, but required at least 45 days (75% of previous 60-day supply)."
+C2000030,M100014,65862-0198-99,2026-05-17,7.5,10.0,0.0,Refill Too Soon,0.0,"Refill occurred after 8 days, but required at least 22 days (75% of previous 30-day supply)."
+C2001136,M100020,00006-0952-54,2026-05-09,342.0,35.0,307.0,Refill Too Soon,307.0,"Refill occurred after 58 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000519,M100024,00093-3109-05,2026-07-14,21.0,10.0,11.0,Refill Too Soon,11.0,"Refill occurred after 19 days, but required at least 45 days (75% of previous 60-day supply)."
+C2000119D,M100033,00093-7271-98,2026-04-16,18.0,20.0,0.0,Refill Too Soon,0.0,"Refill occurred after 0 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000708,M100033,00093-7271-98,2026-05-18,18.0,20.0,0.0,Refill Too Soon,0.0,"Refill occurred after 32 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000195R,M100040,00078-0401-34,2026-12-07,3300.0,150.0,3150.0,Refill Too Soon,3150.0,"Refill occurred after 5 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000334,M100041,50242-0040-62,2026-08-14,51600.0,150.0,51450.0,Refill Too Soon,51450.0,"Refill occurred after 2 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000985,M100043,50111-0333-01,2026-09-09,12.0,10.0,2.0,Refill Too Soon,2.0,"Refill occurred after 13 days, but required at least 45 days (75% of previous 60-day supply)."
+C2000417,M100045,60505-0134-00,2026-11-24,27.0,10.0,17.0,Refill Too Soon,17.0,"Refill occurred after 64 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000973,M100047,00002-3270-30,2026-07-14,468.0,35.0,433.0,Refill Too Soon,433.0,"Refill occurred after 23 days, but required at least 68 days (75% of previous 90-day supply)."
+C2001155,M100047,00093-7271-98,2026-12-04,18.0,20.0,0.0,Refill Too Soon,0.0,"Refill occurred after 47 days, but required at least 68 days (75% of previous 90-day supply)."
+C2001056D,M100048,50242-0040-62,2026-09-24,51600.0,150.0,51450.0,Refill Too Soon,51450.0,"Refill occurred after 0 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000276,M100049,00093-3109-05,2026-07-02,21.0,10.0,11.0,Refill Too Soon,11.0,"Refill occurred after 9 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000567,M100052,00071-0156-23,2026-10-07,405.0,35.0,370.0,Refill Too Soon,370.0,"Refill occurred after 5 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000665D,M100055,60505-0211-12,2026-09-02,375.0,50.0,325.0,Refill Too Soon,325.0,"Refill occurred after 0 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000246,M100057,00006-0275-31,2026-06-28,366.0,35.0,331.0,Refill Too Soon,331.0,"Refill occurred after 49 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000837R,M100058,00006-0275-31,2026-10-21,366.0,35.0,331.0,Refill Too Soon,331.0,"Refill occurred after 5 days, but required at least 45 days (75% of previous 60-day supply)."
+C2000095,M100058,00074-0243-02,2026-12-13,55500.0,150.0,55350.0,Refill Too Soon,55350.0,"Refill occurred after 6 days, but required at least 22 days (75% of previous 30-day supply)."
+C2001128,M100060,60505-0134-00,2026-05-16,9.0,10.0,0.0,Refill Too Soon,0.0,"Refill occurred after 23 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000514,M100062,00006-0952-54,2026-11-14,114.0,35.0,79.0,Refill Too Soon,79.0,"Refill occurred after 44 days, but required at least 45 days (75% of previous 60-day supply)."
+C2000710R,M100070,00078-0401-34,2026-10-01,3300.0,150.0,3150.0,Refill Too Soon,3150.0,"Refill occurred after 5 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000801,M100076,00093-0058-01,2026-04-01,13.5,10.0,3.5,Refill Too Soon,3.5,"Refill occurred after 63 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000201D,M100078,00074-4339-13,2026-10-30,126.0,70.0,56.0,Refill Too Soon,56.0,"Refill occurred after 0 days, but required at least 45 days (75% of previous 60-day supply)."
+C2001054,M100078,00093-3109-05,2026-10-21,21.0,10.0,11.0,Refill Too Soon,11.0,"Refill occurred after 41 days, but required at least 45 days (75% of previous 60-day supply)."
+C2000285,M100079,50111-0333-01,2026-11-05,24.0,10.0,14.0,Refill Too Soon,14.0,"Refill occurred after 9 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000791D,M100083,60505-0211-12,2026-01-31,375.0,50.0,325.0,Refill Too Soon,325.0,"Refill occurred after 0 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000214R,M100087,00074-4339-13,2026-11-08,189.0,70.0,119.0,Refill Too Soon,119.0,"Refill occurred after 5 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000451,M100090,68180-0121-01,2026-04-02,4.5,10.0,0.0,Refill Too Soon,0.0,"Refill occurred after 36 days, but required at least 45 days (75% of previous 60-day supply)."
+C2000877,M100095,00074-0243-02,2026-08-26,55500.0,150.0,55350.0,Refill Too Soon,55350.0,"Refill occurred after 5 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000732,M100097,68180-0121-01,2026-06-07,13.5,10.0,3.5,Refill Too Soon,3.5,"Refill occurred after 27 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000883,M100099,00085-4345-05,2026-01-26,72000.0,150.0,71850.0,Refill Too Soon,71850.0,"Refill occurred after 19 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000048R,M100099,65862-0198-99,2026-08-04,7.5,10.0,0.0,Refill Too Soon,0.0,"Refill occurred after 5 days, but required at least 22 days (75% of previous 30-day supply)."
+C2001081,M100100,00006-0952-54,2026-03-02,342.0,35.0,307.0,Refill Too Soon,307.0,"Refill occurred after 0 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000775,M100100,00006-0952-54,2026-04-03,228.0,35.0,193.0,Refill Too Soon,193.0,"Refill occurred after 32 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000775D,M100100,00006-0952-54,2026-04-03,228.0,35.0,193.0,Refill Too Soon,193.0,"Refill occurred after 0 days, but required at least 45 days (75% of previous 60-day supply)."
+C2001173R,M100105,00074-4339-13,2026-04-12,126.0,70.0,56.0,Refill Too Soon,56.0,"Refill occurred after 5 days, but required at least 45 days (75% of previous 60-day supply)."
+C2000468D,M100106,68180-0121-01,2026-05-21,9.0,10.0,0.0,Refill Too Soon,0.0,"Refill occurred after 0 days, but required at least 45 days (75% of previous 60-day supply)."
+C2000330R,M100107,00093-7271-98,2026-11-29,18.0,20.0,0.0,Refill Too Soon,0.0,"Refill occurred after 5 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000848,M100109,00093-7271-98,2026-12-16,6.0,20.0,0.0,Refill Too Soon,0.0,"Refill occurred after 15 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000292R,M100113,00006-0952-54,2026-03-11,114.0,35.0,79.0,Refill Too Soon,79.0,"Refill occurred after 5 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000843R,M100122,00085-4345-05,2026-06-08,72000.0,150.0,71850.0,Refill Too Soon,71850.0,"Refill occurred after 5 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000258D,M100128,50111-0333-01,2026-10-02,36.0,10.0,26.0,Refill Too Soon,26.0,"Refill occurred after 0 days, but required at least 68 days (75% of previous 90-day supply)."
+C2001010R,M100130,00071-0156-23,2026-09-18,135.0,35.0,100.0,Refill Too Soon,100.0,"Refill occurred after 5 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000712D,M100131,00085-4345-05,2026-07-04,72000.0,150.0,71850.0,Refill Too Soon,71850.0,"Refill occurred after 0 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000872R,M100132,00078-0401-34,2026-03-28,3300.0,150.0,3150.0,Refill Too Soon,3150.0,"Refill occurred after 5 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000275R,M100140,00006-0952-54,2026-05-15,228.0,35.0,193.0,Refill Too Soon,193.0,"Refill occurred after 5 days, but required at least 45 days (75% of previous 60-day supply)."
+C2000681,M100142,50111-0333-01,2026-11-04,36.0,10.0,26.0,Refill Too Soon,26.0,"Refill occurred after 31 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000080,M100145,00002-3270-30,2026-01-26,468.0,35.0,433.0,Refill Too Soon,433.0,"Refill occurred after 9 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000067,M100145,00002-3270-30,2026-04-03,468.0,35.0,433.0,Refill Too Soon,433.0,"Refill occurred after 67 days, but required at least 68 days (75% of previous 90-day supply)."
+C2001150R,M100145,00074-0243-02,2026-11-28,55500.0,150.0,55350.0,Refill Too Soon,55350.0,"Refill occurred after 5 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000495,M100149,00074-0243-02,2026-08-02,55500.0,150.0,55350.0,Refill Too Soon,55350.0,"Refill occurred after 6 days, but required at least 22 days (75% of previous 30-day supply)."
+C2001044,M100151,00078-0401-34,2026-10-07,3300.0,150.0,3150.0,Refill Too Soon,3150.0,"Refill occurred after 21 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000221,M100153,50242-0040-62,2026-02-13,51600.0,150.0,51450.0,Refill Too Soon,51450.0,"Refill occurred after 17 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000014,M100154,00074-4339-13,2026-08-10,63.0,70.0,0.0,Refill Too Soon,0.0,"Refill occurred after 57 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000158,M100160,00074-4339-13,2026-12-12,189.0,70.0,119.0,Refill Too Soon,119.0,"Refill occurred after 33 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000267,M100161,00002-3270-30,2026-10-25,156.0,35.0,121.0,Refill Too Soon,121.0,"Refill occurred after 52 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000542,M100163,00074-4339-13,2026-07-19,63.0,70.0,0.0,Refill Too Soon,0.0,"Refill occurred after 59 days, but required at least 68 days (75% of previous 90-day supply)."
+C2001082R,M100165,00006-0275-31,2026-11-18,549.0,35.0,514.0,Refill Too Soon,514.0,"Refill occurred after 5 days, but required at least 68 days (75% of previous 90-day supply)."
+C2001096,M100166,00002-3270-30,2026-03-14,468.0,35.0,433.0,Refill Too Soon,433.0,"Refill occurred after 41 days, but required at least 45 days (75% of previous 60-day supply)."
+C2000977R,M100168,00078-0401-34,2026-06-15,3300.0,150.0,3150.0,Refill Too Soon,3150.0,"Refill occurred after 5 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000882,M100177,00074-0243-02,2026-02-16,55500.0,150.0,55350.0,Refill Too Soon,55350.0,"Refill occurred after 6 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000731R,M100178,00074-4339-13,2026-06-26,63.0,70.0,0.0,Refill Too Soon,0.0,"Refill occurred after 5 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000004,M100181,00093-7271-98,2026-12-26,12.0,20.0,0.0,Refill Too Soon,0.0,"Refill occurred after 6 days, but required at least 45 days (75% of previous 60-day supply)."
+C2000313,M100184,60505-0134-00,2026-09-03,27.0,10.0,17.0,Refill Too Soon,17.0,"Refill occurred after 59 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000573D,M100184,65862-0198-99,2026-07-13,15.0,10.0,5.0,Refill Too Soon,5.0,"Refill occurred after 0 days, but required at least 45 days (75% of previous 60-day supply)."
+C2000423R,M100186,00078-0401-34,2026-10-26,3300.0,150.0,3150.0,Refill Too Soon,3150.0,"Refill occurred after 5 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000458R,M100186,50242-0040-62,2026-03-04,51600.0,150.0,51450.0,Refill Too Soon,51450.0,"Refill occurred after 5 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000588,M100187,00074-4339-13,2026-06-28,63.0,70.0,0.0,Refill Too Soon,0.0,"Refill occurred after 33 days, but required at least 68 days (75% of previous 90-day supply)."
+C2000282D,M100187,50242-0040-62,2026-08-06,51600.0,150.0,51450.0,Refill Too Soon,51450.0,"Refill occurred after 0 days, but required at least 22 days (75% of previous 30-day supply)."
+C2000568R,M100197,60505-0211-12,2026-10-14,375.0,50.0,325.0,Refill Too Soon,325.0,"Refill occurred after 5 days, but required at least 22 days (75% of previous 30-day supply)."

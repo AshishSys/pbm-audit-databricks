@@ -1,0 +1,40 @@
+{
+  "plan_name": "Standard Employer Health Plan",
+  "audit_year": 2026,
+  "copay_structure": {
+    "retail_retail": {
+      "generic": 10.00,
+      "brand": 35.00
+    },
+    "mail_order": {
+      "generic": 20.00,
+      "brand": 70.00
+    },
+    "specialty": {
+      "generic": 50.00,
+      "brand": 150.00
+    }
+  },
+  "daw_penalty_policy": {
+    "enabled": true,
+    "daw_codes_subject_to_penalty": [1, 2],
+    "penalty_type": "cost_difference",
+    "description": "Member pays brand copay plus the cost difference between Brand AWP and Generic AWP when generic is available."
+  },
+  "refill_too_soon": {
+    "threshold_percentage": 0.75,
+    "description": "Claims filled before 75% of the previous fill's days supply has elapsed are flagged as Refill-too-soon."
+  },
+  "duplicate_claims": {
+    "window_days": 0,
+    "description": "Claims for the same member, same drug (NDC), and same fill date."
+  },
+  "rebate_guarantees": {
+    "retail_generic": 15.00,
+    "retail_brand": 220.00,
+    "mail_generic": 35.00,
+    "mail_brand": 310.00,
+    "specialty_generic": 600.00,
+    "specialty_brand": 1500.00
+  }
+}

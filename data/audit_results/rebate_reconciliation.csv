@@ -1,0 +1,7 @@
+rebate_tier,claim_count,guaranteed_rate_per_claim,expected_rebate_yield,total_awp_spend,total_pbm_spend
+mail_brand,85,310.0,26350.0,10773.0,5012.0
+mail_generic,71,35.0,2485.0,900.0,7.0
+retail_brand,300,220.0,66000.0,89265.0,78870.0
+retail_generic,395,15.0,5925.0,7644.0,3939.0
+specialty_brand,309,1500.0,463500.0,14973450.0,14927550.0
+specialty_generic,72,600.0,43200.0,27187.5,23637.5

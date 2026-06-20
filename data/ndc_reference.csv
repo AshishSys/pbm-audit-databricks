@@ -1,0 +1,18 @@
+ndc,drug_name,is_generic,awp_per_unit,generic_for,channel
+00093-3109-05,Lisinopril 10mg,True,0.35,Prinivil,retail
+00093-0058-01,Atorvastatin 20mg,True,0.45,Lipitor,retail
+68180-0121-01,Metformin 500mg,True,0.15,Glucophage,retail
+65862-0198-99,Amoxicillin 500mg,True,0.25,Amoxil,retail
+50111-0333-01,Fluoxetine 20mg,True,0.4,Prozac,retail
+60505-0134-00,Omeprazole 20mg,True,0.3,Prilosec,retail
+00006-0952-54,Prinivil 10mg,False,3.8,,retail
+00071-0156-23,Lipitor 20mg,False,4.5,,retail
+00002-3270-30,Prozac 20mg,False,5.2,,retail
+00006-0275-31,Singulair 10mg,False,6.1,,retail
+00093-7271-98,Levothyroxine 50mcg,True,0.2,Synthroid,mail
+00074-4339-13,Synthroid 50mcg,False,2.1,,mail
+00074-0243-02,Humira 40mg/0.4ml,False,1850.0,,specialty
+50242-0040-62,Enbrel 50mg/ml,False,1720.0,,specialty
+00085-4345-05,Keytruda 100mg/4ml,False,2400.0,,specialty
+60505-0211-12,Imatinib 100mg,True,12.5,Gleevec,specialty
+00078-0401-34,Gleevec 100mg,False,110.0,,specialty

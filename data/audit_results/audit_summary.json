@@ -1,0 +1,28 @@
+{
+  "total_claims": 1232,
+  "total_flagged_claims": 122,
+  "total_financial_impact": 1115737.0,
+  "expected_rebate_yield": 607460.0,
+  "test_counts_and_impacts": {
+    "Duplicate Claim": {
+      "count": 13,
+      "impact": 176501.0
+    },
+    "Incorrect Copay": {
+      "count": 10,
+      "impact": 635.0
+    },
+    "Invalid NDC": {
+      "count": 15,
+      "impact": 1162.0
+    },
+    "Questionable AWP": {
+      "count": 10,
+      "impact": 89772.0
+    },
+    "Refill Too Soon": {
+      "count": 74,
+      "impact": 847667.0
+    }
+  }
+}

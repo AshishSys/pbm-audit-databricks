@@ -1,0 +1,45 @@
+
+PHARMACY BENEFIT MANAGEMENT SERVICE AGREEMENT - SUMMARY PLAN DESCRIPTION (SPD)
+Audit Year: 2026
+Plan Sponsor: Standard Employer Health Plan
+
+This document outlines the agreed-upon benefit designs, copayment schedules, pricing discounts, 
+and performance metrics for pharmacy benefits.
+
+SECTION 1: MEMBER COPAYMENTS
+Members will be responsible for a flat copayment based on the pharmacy channel and drug tier:
+1. Retail Network Pharmacy (Up to 30 Days Supply):
+   - Generic Drugs: Member Copay of $10.00 per prescription.
+   - Brand Name Drugs: Member Copay of $35.00 per prescription.
+2. Mail Order Pharmacy (Up to 90 Days Supply):
+   - Generic Drugs: Member Copay of $20.00 per prescription.
+   - Brand Name Drugs: Member Copay of $70.00 per prescription.
+3. Specialty Pharmacy Program (Up to 30 Days Supply):
+   - Generic Drugs: Member Copay of $50.00 per prescription.
+   - Brand Name Drugs: Member Copay of $150.00 per prescription.
+
+SECTION 2: DISPENSE AS WRITTEN (DAW) RULES
+If a member or physician selects a Brand Name Drug when a Generic equivalent is available 
+(specifically DAW Codes 1 and 2), the member will be responsible for the Standard Brand Copay 
+PLUS the difference in cost between the Brand AWP and the Generic AWP. This penalty shall 
+apply automatically unless explicitly waived by the Plan Administrator.
+
+SECTION 3: REFILL TIMING PATTERNS
+Plan benefits require that a prescription be at least 75% utilized before a refill is authorized 
+and paid. This is calculated using the Days Supply of the immediately preceding claim. Claims filled 
+prior to this threshold will be flagged as Refill-too-soon and are subject to audit and recovery.
+
+SECTION 4: DUPLICATE CLAIMS
+Claims dispensed for the same member, same drug (NDC), on the same day are prohibited and 
+represent administrative processing duplicates. The PBM is responsible for recovering 100% of 
+such duplicate overpayments.
+
+SECTION 5: PBM REBATE GUARANTEES
+The PBM guarantees the following minimum manufacturer rebate payments back to the Plan Sponsor:
+- Retail Network Generic claims: $15.00 per claim
+- Retail Network Brand claims: $220.00 per claim
+- Mail Order Generic claims: $35.00 per claim
+- Mail Order Brand claims: $310.00 per claim
+- Specialty Generic claims: $600.00 per claim
+- Specialty Brand claims: $1500.00 per claim
+    

@@ -1,0 +1,151 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Apply custom typography globally */
+html, body, [class*="css"], .stMarkdown, p, div, span, button, table {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    color: #0f172a !important;
+}
+
+/* Premium Header styling */
+.main-header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    color: #f8fafc;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.15);
+    border-bottom: 4px solid #38bdf8;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Graphic glow element in header */
+.main-header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Custom KPI card styles with glassmorphic look and micro-animations */
+.kpi-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1.75rem;
+    border-radius: 12px;
+    border-left: 5px solid #0284c7;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.05);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.kpi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -8px rgba(2, 132, 199, 0.2);
+}
+
+.kpi-title {
+    font-size: 0.8rem;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+}
+
+.kpi-value {
+    font-size: 2.25rem;
+    color: #0f172a;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    letter-spacing: -0.03em;
+}
+
+/* Custom tab overrides */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 12px;
+    background-color: #f1f5f9;
+    padding: 6px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: transparent !important;
+    border-radius: 6px !important;
+    color: #475569 !important;
+    font-weight: 600 !important;
+    padding: 10px 20px !important;
+    border: none !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    color: #0f172a !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #ffffff !important;
+    color: #0284c7 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Sidebar premium adjustments */
+section[data-testid="stSidebar"] {
+    background-color: #0f172a !important;
+}
+
+section[data-testid="stSidebar"] [class*="css"] {
+    color: #e2e8f0 !important;
+}
+
+section[data-testid="stSidebar"] h1, 
+section[data-testid="stSidebar"] h2, 
+section[data-testid="stSidebar"] h3 {
+    color: #ffffff !important;
+}
+
+/* Custom button styles */
+.stButton>button {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.6rem 1.5rem !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.2) !important;
+    transition: all 0.2s ease !important;
+}
+
+.stButton>button:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 15px rgba(2, 132, 199, 0.3) !important;
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+}
+
+/* Table / DataFrame adjustments */
+[data-testid="stTable"] {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+[data-testid="stTable"] th {
+    background-color: #f8fafc !important;
+    color: #475569 !important;
+    font-weight: 600 !important;
+}

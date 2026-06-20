@@ -1,0 +1,26 @@
+# Python virtual environment
+.venv/
+venv/
+ENV/
+
+# Python cache / compilation files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE / OS specific files
+.DS_Store
+.vscode/
+.idea/
+
+# Local configuration
+.env
+
+# Spark / Spark logs
+spark-warehouse/
+metastore_db/
+derby.log
