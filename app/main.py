@@ -170,7 +170,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Sidebar Configuration
-st.sidebar.image("https://assets.milliman.com/downloads/Millimanillustration090generalbusiness.jpg", use_column_width=True, caption="PBM Claims Auditing Best Practices")
+st.sidebar.image("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80", use_column_width=True, caption="Next Generation Claims Auditing Best Practices")
 st.sidebar.markdown("---")
 st.sidebar.markdown("### ⚙️ System Controls")
 
@@ -186,7 +186,7 @@ if not os.path.exists(os.path.join(CONFIG_DIR, "benefit_design.json")):
     run_generation(DATA_DIR)
 
 if is_data_available():
-    if st.sidebar.button("🚀 Run PySpark Audit Engine", help="Execute 6 Milliman audit tests on claim files"):
+    if st.sidebar.button("🚀 Run PySpark Audit Engine", help="Execute 6 Next Generation audit tests on claim files"):
         run_pbm_audit()
         st.rerun()
 else:

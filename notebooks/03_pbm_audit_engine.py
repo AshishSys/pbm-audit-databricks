@@ -3,7 +3,7 @@
 # MAGIC # 03: PySpark PBM Claims Audit Engine
 # MAGIC This notebook runs the PySpark-based Pharmacy Benefit Manager (PBM) Claims Audit engine.
 # MAGIC 
-# MAGIC It loads the claims database, references, and benefit design rules, runs the 6 Milliman claims audit tests, and performs the pricing and rebate reconciliation.
+# MAGIC It loads the claims database, references, and benefit design rules, runs the 6 Next Generation claims audit tests, and performs the pricing and rebate reconciliation.
 
 # COMMAND ----------
 

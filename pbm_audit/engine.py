@@ -63,42 +63,42 @@ class PBMAuditEngine:
     # ================= PUBLIC ROUTING METHODS =================
 
     def audit_invalid_ndcs(self, claims_df, drugs_df):
-        """Milliman Test 1: Invalid NDCs (routed dynamically)."""
+        """Next Generation Test 1: Invalid NDCs (routed dynamically)."""
         if self.use_spark:
             return self._spark_audit_invalid_ndcs(claims_df, drugs_df)
         else:
             return self._pandas_audit_invalid_ndcs(claims_df, drugs_df)
 
     def audit_questionable_awp(self, claims_df, drugs_df):
-        """Milliman Test 2: Questionable AWP (routed dynamically)."""
+        """Next Generation Test 2: Questionable AWP (routed dynamically)."""
         if self.use_spark:
             return self._spark_audit_questionable_awp(claims_df, drugs_df)
         else:
             return self._pandas_audit_questionable_awp(claims_df, drugs_df)
 
     def audit_daw_penalties(self, claims_df, drugs_df, config):
-        """Milliman Test 3: DAW Penalty Bypass (routed dynamically)."""
+        """Next Generation Test 3: DAW Penalty Bypass (routed dynamically)."""
         if self.use_spark:
             return self._spark_audit_daw_penalties(claims_df, drugs_df, config)
         else:
             return self._pandas_audit_daw_penalties(claims_df, drugs_df, config)
 
     def audit_incorrect_copays(self, claims_df, config):
-        """Milliman Test 4: Incorrect Copays (routed dynamically)."""
+        """Next Generation Test 4: Incorrect Copays (routed dynamically)."""
         if self.use_spark:
             return self._spark_audit_incorrect_copays(claims_df, config)
         else:
             return self._pandas_audit_incorrect_copays(claims_df, config)
 
     def audit_duplicate_claims(self, claims_df):
-        """Milliman Test 5: Duplicate Claims (routed dynamically)."""
+        """Next Generation Test 5: Duplicate Claims (routed dynamically)."""
         if self.use_spark:
             return self._spark_audit_duplicate_claims(claims_df)
         else:
             return self._pandas_audit_duplicate_claims(claims_df)
 
     def audit_refill_too_soon(self, claims_df, config):
-        """Milliman Test 6: Refill-Too-Soon (routed dynamically)."""
+        """Next Generation Test 6: Refill-Too-Soon (routed dynamically)."""
         if self.use_spark:
             return self._spark_audit_refill_too_soon(claims_df, config)
         else:

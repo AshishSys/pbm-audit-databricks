@@ -71,7 +71,7 @@ def generate_members(num_members=200):
     return pd.DataFrame(members)
 
 def generate_claims(df_drugs, df_members, num_claims=1000, start_year=2026):
-    """Generates synthetic PBM claims data, embedding Milliman audit audit-failures."""
+    """Generates synthetic PBM claims data, embedding Next Generation audit audit-failures."""
     claims = []
     
     # Pre-calculate active members

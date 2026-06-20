@@ -6,7 +6,7 @@
 
 An enterprise-grade Pharmacy Benefit Manager (PBM) Claims Audit platform built on **PySpark** (for large-scale data engineering) and **Generative AI** (for automated contract parsing and natural language auditing). 
 
-This project implements 100% electronic pharmacy claims audits based on **Milliman's PBM Best Practices Series: Pharmacy benefit claims auditing** whitepaper, showcasing a complete workflow from raw claims ingestion to visual executive insights.
+This project implements 100% electronic pharmacy claims audits based on **Next Generation PBM Best Practices Series: Pharmacy benefit claims auditing** guidelines, showcasing a complete workflow from raw claims ingestion to visual executive insights.
 
 ---
 
@@ -32,9 +32,9 @@ The system comprises four core components:
 
 ---
 
-## 🕵️ Implemented Milliman Audit Tests
+## 🕵️ Implemented Next Generation Audit Tests
 
-This solution implements the core electronic audit tests described by Milliman to monitor payment integrity and recover overpayments:
+This solution implements the core electronic audit tests described by Next Generation standards to monitor payment integrity and recover overpayments:
 
 1. **Invalid NDC Claims**: Flags claim lines billed with National Drug Codes (NDCs) that do not exist in the master reference drug database.
 2. **Questionable AWP Claims**: Flags claims where the billed Average Wholesale Price (AWP) is higher than the reference database AWP (recalculated: quantity × unit AWP) by more than 1%.
