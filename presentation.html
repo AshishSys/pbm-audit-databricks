@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBM Audit & AI Platform - Interactive Video Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --primary: #38bdf8;
+            --accent: #a855f7;
+            --success: #22c55e;
+            --warning: #eab308;
+            --danger: #ef4444;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        header {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        button {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            padding: 0.5rem 1.25rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+        }
+
+        button:hover {
+            background: var(--primary);
+            color: var(--bg-color);
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        }
+
+        .active-btn {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+        }
+
+        .active-btn:hover {
+            background: #b55fe6;
+            color: white;
+            border-color: #b55fe6;
+        }
+
+        main {
+            flex-grow: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .slide {
+            position: absolute;
+            width: 90%;
+            max-width: 900px;
+            opacity: 0;
+            transform: scale(0.95);
+            pointer-events: none;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            line-height: 1.1;
+        }
+
+        .slide-desc {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            line-height: 1.6;
+        }
+
+        .visual-container {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            height: 320px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Subtitles Footer */
+        .subtitles-container {
+            background-color: #020617;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            min-height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .narration {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        /* Timeline bar */
+        .timeline {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .timeline-progress {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transition: width 0.1s linear;
+        }
+
+        /* --- Animations for specific slides --- */
+        
+        /* Slide 1 Cover */
+        .cover-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--primary) 0%, var(--accent) 100%);
+            box-shadow: 0 0 40px rgba(56, 189, 248, 0.4);
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 60px rgba(168, 85, 247, 0.6); }
+        }
+
+        /* Slide 2 Money Leak */
+        .leak-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        .leak-money {
+            font-size: 5rem;
+            color: var(--danger);
+            font-weight: bold;
+            animation: drip 1.5s infinite ease-in-out;
+        }
+        @keyframes drip {
+            0% { transform: translateY(-10px); opacity: 1; }
+            100% { transform: translateY(40px); opacity: 0; }
+        }
+
+        /* Slide 3 Claims Filter Animation */
+        .filter-flow {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            width: 80%;
+            justify-content: space-around;
+        }
+        .claim-card {
+            background: #334155;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--primary);
+            font-weight: bold;
+            animation: flow 3s infinite linear;
+            position: absolute;
+            left: 10%;
+        }
+        .filter-gate {
+            background: rgba(255, 255, 255, 0.05);
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            border: 2px dashed var(--accent);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        @keyframes flow {
+            0% { left: 10%; background: #334155; border-color: var(--primary); }
+            50% { left: 45%; background: #3f3f46; border-color: var(--warning); }
+            100% { left: 80%; background: #7f1d1d; border-color: var(--danger); }
+        }
+
+        /* Slide 4 Hybrid Engine */
+        .engine-nodes {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+        }
+        .node {
+            background: #0f172a;
+            border: 2px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            width: 160px;
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+        }
+        .node.node-spark {
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+        }
+        .connection-pipe {
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            position: relative;
+        }
+        .pulse-bullet {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            top: -4px;
+            left: 0;
+            animation: slide-bullet 2s infinite linear;
+        }
+        @keyframes slide-bullet {
+            0% { left: 0%; }
+            100% { left: 100%; }
+        }
+
+        /* Slide 5 AI Parser */
+        .doc-in {
+            background: #334155;
+            padding: 1rem;
+            border-radius: 6px;
+            width: 150px;
+            height: 180px;
+            font-size: 0.65rem;
+            opacity: 0.8;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .json-out {
+            background: #090d16;
+            color: #34d399;
+            padding: 1rem;
+            border-radius: 6px;
+            width: 200px;
+            height: 180px;
+            font-family: monospace;
+            font-size: 0.75rem;
+            border: 1px solid #10b981;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.15);
+        }
+
+        /* Slide 6 AI Chatbot UI */
+        .chat-bubble {
+            background: #334155;
+            padding: 0.75rem 1.25rem;
+            border-radius: 12px 12px 12px 0;
+            max-width: 300px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        .chat-bubble.bot {
+            background: #1e1b4b;
+            border: 1px solid var(--accent);
+            border-radius: 12px 12px 0 12px;
+            align-self: flex-end;
+            box-shadow: 0 0 10px rgba(168, 85, 247, 0.1);
+        }
+        .chat-window {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            height: 80%;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">NEXT GENERATION PBM AUDIT</div>
+        <div class="controls">
+            <button id="prev-btn">◀ Previous</button>
+            <button id="play-btn" class="active-btn">⏸ Pause Video</button>
+            <button id="next-btn">Next ▶</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Slide 1: Cover -->
+        <div class="slide active" id="slide-1" data-duration="6">
+            <h2>Next Generation PBM Claims Auditing Platform</h2>
+            <p class="slide-desc">An interactive video overview of our enterprise-grade Pharmacy Benefit Manager (PBM) claims audit and financial reconciliation system built with PySpark and Generative AI.</p>
+            <div class="visual-container">
+                <div class="cover-circle"></div>
+            </div>
+        </div>
+
+        <!-- Slide 2: The Problem -->
+        <div class="slide" id="slide-2" data-duration="8">
+            <h2>The Challenge: Hidden Costs and Compliance Gaps</h2>
+            <p class="slide-desc">Manually coded PBM agreements result in cost leakage, duplicate claims, refill-too-soon exceptions, and bypassed DAW penalties. Plan sponsors lose thousands of dollars without automated oversight.</p>
+            <div class="visual-container">
+                <div class="leak-container">
+                    <div class="leak-money">$</div>
+                    <div style="font-weight: 600; color: var(--danger);">Plan Sponsor Cost Leakage</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: The 6 Tests -->
+        <div class="slide" id="slide-3" data-duration="9">
+            <h2>6 Core Claims Audit Exceptions</h2>
+            <p class="slide-desc">Our platform tests 100% of claims for Invalid NDCs, Questionable AWP, DAW Penalty Bypass, Incorrect Copays, duplicate charges, and refill utilization. Here we simulate a claim flowing through the rules filters.</p>
+            <div class="visual-container">
+                <div class="filter-flow">
+                    <div class="claim-card">Rx Claim</div>
+                    <div class="filter-gate">NDC</div>
+                    <div class="filter-gate">AWP</div>
+                    <div class="filter-gate">DAW</div>
+                    <div class="filter-gate" style="border-color: var(--danger); color: var(--danger);">RTS</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Hybrid Engine -->
+        <div class="slide" id="slide-4" data-duration="8">
+            <h2>Databricks Scalability + Local Fallback</h2>
+            <p class="slide-desc">Built using PySpark to process millions of claims in seconds on Databricks clusters. The engine automatically falls back to pure Pandas when run locally on developer environments.</p>
+            <div class="visual-container">
+                <div class="engine-nodes">
+                    <div class="node node-spark">
+                        <div style="font-weight:bold; color: var(--primary);">PySpark</div>
+                        <div style="font-size:0.8rem; margin-top:0.25rem;">Databricks Cloud</div>
+                    </div>
+                    <div class="connection-pipe">
+                        <div class="pulse-bullet"></div>
+                    </div>
+                    <div class="node">
+                        <div style="font-weight:bold; color: var(--accent);">Pandas</div>
+                        <div style="font-size:0.8rem; margin-top:0.25rem;">Local Dashboard</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: AI parser -->
+        <div class="slide" id="slide-5" data-duration="8">
+            <h2>AI-Powered Contract Rule Parser</h2>
+            <p class="slide-desc">Generative AI automatically converts 100-page plain-text PBM contracts and SPDs into structured JSON configs containing copays and guarantees, eliminating manual coding errors.</p>
+            <div class="visual-container" style="gap: 2rem;">
+                <div class="doc-in">
+                    <strong>PBM Agreement Section 1:</strong><br><br>
+                    Retail Copays:<br>
+                    - Generic: $10.00<br>
+                    - Brand: $35.00<br><br>
+                    DAW Penalty is active...
+                </div>
+                <div style="font-size:2rem; color: var(--accent);">➔</div>
+                <div class="json-out">
+<pre>{
+  "copays": {
+    "retail": {
+      "generic": 10.0,
+      "brand": 35.0
+    }
+  },
+  "daw_penalty": true
+}</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: AI Chatbot -->
+        <div class="slide" id="slide-6" data-duration="9">
+            <h2>AI Auditor Assistant</h2>
+            <p class="slide-desc">Plan sponsors can converse with the AI Auditor chatbot in plain English to immediately isolate overpayment exceptions, explain DAW rules, or detail pricing recovery ROI.</p>
+            <div class="visual-container">
+                <div class="chat-window">
+                    <div class="chat-bubble">What is our total potential savings?</div>
+                    <div class="chat-bubble bot">Based on the audit of 1,200 claims, we identified a total potential recovery of $6,450.00, driven mostly by duplicate claims.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Outro -->
+        <div class="slide" id="slide-7" data-duration="6">
+            <h2>Start Auditing Your PBM Today</h2>
+            <p class="slide-desc">Access the repository at AshishSys's GitHub. Run backend scripts, review Databricks notebooks, launch Streamlit dashboards, and gain complete transparency over pharmacy spend.</p>
+            <div class="visual-container">
+                <div style="text-align: center;">
+                    <div style="font-size: 1.25rem; font-weight: bold; color: var(--primary); margin-bottom: 0.5rem;">GitHub Repository</div>
+                    <div style="font-family: monospace; font-size:1.1rem; padding: 0.5rem 1.5rem; background: rgba(0,0,0,0.3); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05)">
+                        github.com/AshishSys/pbm-audit-databricks
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="subtitles-container">
+        <div class="narration" id="narration-text">Narration loading...</div>
+        <div class="timeline">
+            <div class="timeline-progress" id="progress-bar"></div>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const narrationText = document.getElementById('narration-text');
+        const progressBar = document.getElementById('progress-bar');
+        const playBtn = document.getElementById('play-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        const narrations = [
+            "Welcome to the Next Generation PBM Claims Auditing Platform presentation. Today, we'll demonstrate how to modernize pharmacy claims compliance and audits.",
+            "Plan sponsors struggle with massive cost leakage because PBM setups are configured manually, leading to duplicates, copay mismatches, and missed contract rules.",
+            "Our platform checks 100% of claim records across six core exceptions: NDCs, questionable AWP pricing, duplicate claims, copay schedules, and refill timing logs.",
+            "The platform is built on a hybrid core: it executes natively on PySpark inside Databricks workspaces, but seamlessly falls back to pure Pandas when run locally.",
+            "Generative AI extracts benefit parameters from unstructured Summary Plan Descriptions (SPDs) and contract texts, converting them into machine-readable configs.",
+            "Users can ask the 'AI Auditor Assistant' chatbot questions about metrics, DAW rules, or total potential ROI, receiving immediate conversational insights.",
+            "The full codebase—including Streamlit dashboards, notebooks, and generator tools—is available on GitHub at github.com/AshishSys/pbm-audit-databricks."
+        ];
+
+        let currentSlideIdx = 0;
+        let isPlaying = true;
+        let slideTimer = null;
+        let progressInterval = null;
+        let startTime = 0;
+        let slideDuration = 0; // in milliseconds
+        let elapsed = 0;
+
+        function updateSlide() {
+            slides.forEach((slide, idx) => {
+                if (idx === currentSlideIdx) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+
+            narrationText.innerText = narrations[currentSlideIdx];
+            
+            // Reset Progress Bar
+            progressBar.style.width = '0%';
+            elapsed = 0;
+            startTime = Date.now();
+            slideDuration = parseInt(slides[currentSlideIdx].getAttribute('data-duration')) * 1000;
+
+            if (isPlaying) {
+                startTimers();
+            }
+        }
+
+        function startTimers() {
+            clearTimers();
+            
+            startTime = Date.now() - elapsed;
+
+            // Timer for sliding next
+            slideTimer = setTimeout(() => {
+                currentSlideIdx = (currentSlideIdx + 1) % slides.length;
+                updateSlide();
+            }, slideDuration - elapsed);
+
+            // Progress bar interval
+            progressInterval = setInterval(() => {
+                elapsed = Date.now() - startTime;
+                let pct = (elapsed / slideDuration) * 100;
+                if (pct > 100) pct = 100;
+                progressBar.style.width = pct + '%';
+            }, 100);
+        }
+
+        function clearTimers() {
+            clearTimeout(slideTimer);
+            clearInterval(progressInterval);
+        }
+
+        function togglePlay() {
+            if (isPlaying) {
+                isPlaying = false;
+                clearTimers();
+                playBtn.innerText = '▶ Play Video';
+                playBtn.classList.remove('active-btn');
+            } else {
+                isPlaying = true;
+                startTimers();
+                playBtn.innerText = '⏸ Pause Video';
+                playBtn.classList.add('active-btn');
+            }
+        }
+
+        playBtn.addEventListener('click', togglePlay);
+
+        prevBtn.addEventListener('click', () => {
+            clearTimers();
+            elapsed = 0;
+            currentSlideIdx = (currentSlideIdx - 1 + slides.length) % slides.length;
+            updateSlide();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            clearTimers();
+            elapsed = 0;
+            currentSlideIdx = (currentSlideIdx + 1) % slides.length;
+            updateSlide();
+        });
+
+        // Initialize first slide
+        updateSlide();
+    </script>
+</body>
+</html>
